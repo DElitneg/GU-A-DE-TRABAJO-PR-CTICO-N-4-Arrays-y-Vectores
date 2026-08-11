@@ -16,11 +16,11 @@ namespace ConsoleApplication1
         {
             int contador = 0;
             double total = 0;
-            double[] temperaturas = { 0,0,0,0,0,0,99 };
+            double[] temperaturas = { 0, 0, 0, 0, 0, 0, 0 };
             double mayor = temperaturas[0], menor = temperaturas[6];
 
 
-            for(int i = 0; i < temperaturas.Length; i++)
+            for (int i = 0; i < temperaturas.Length; i++)
             {
 
                 Console.WriteLine("Temperatura dia " + contador);
@@ -28,7 +28,8 @@ namespace ConsoleApplication1
                 contador += 1;
             }
 
-            
+            mayor = temperaturas[0];
+            menor = temperaturas[0];
             for (int i = 0; i < temperaturas.Length; i++)
             {
 
@@ -37,17 +38,15 @@ namespace ConsoleApplication1
                 {
                     mayor = temperaturas[i];
                 }
-
-                total += temperaturas[i];
-                if (temperaturas[i] < menor)
+                else if (temperaturas[i] < menor)
                 {
                     menor = temperaturas[i];
                 }
             }
 
             double promedio = total / temperaturas.Length;
-            Console.Write("MAYOR:"+mayor);
-            Console.Write("MENOR: "+menor);
+            Console.Write("MAYOR:" + mayor);
+            Console.Write("MENOR: " + menor);
             Console.Write("PROMEDIO: " + promedio);
 
         }
