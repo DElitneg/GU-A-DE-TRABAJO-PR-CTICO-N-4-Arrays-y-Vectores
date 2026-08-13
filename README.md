@@ -332,3 +332,53 @@ namespace ConsoleApplication1
 
 // 8
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int contador = 0, calificacion = 0;
+            int[] clientes = { 0, 1, 2, 3, 4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5 };
+            int[] calificacionTotal = { 0, 0, 0, 0, 0 };            
+
+            for (int i = 0; i < clientes.Length; i++)
+            {
+                Console.WriteLine("Califique su atencion del 1 al 5, Cliente N°" + (contador + 1));
+                calificacion = int.Parse(Console.ReadLine());
+
+                switch(calificacion)
+                {
+                    case 1 : calificacionTotal[0] += 1;
+                        break;
+
+                    case 2 : calificacionTotal[1] += 1;
+                        break;
+
+                    case 3 : calificacionTotal[2] += 1;
+                        break;
+
+                    case 4 : calificacionTotal[3] += 1;
+                        break;
+
+                    case 5 : calificacionTotal[4] += 1;
+                        break;
+                }
+                contador += 1;
+            }
+            foreach(int calificaciones in calificacionTotal)
+            {
+                Console.WriteLine(calificaciones);
+            }
+            
+        }
+    }
+}
+
+// 9
