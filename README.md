@@ -382,3 +382,84 @@ namespace ConsoleApplication1
 }
 
 // 9
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int contador = 0;
+
+            int[] productos = { 100, 100, 250, 500, 300, 250, 250, 300, 500, 200 };
+
+            Console.WriteLine("Introduzca el numero del producto del que quire hacer una Devolucion");
+            int devolucion = int.Parse(Console.ReadLine());
+
+
+            for (int i = 0; productos[contador] != devolucion; i++)  
+            {
+                contador += 1;
+            }            
+            productos[contador] = 0;
+
+
+            foreach(int ventas in productos)
+            {
+                Console.WriteLine(ventas);
+            }
+
+        }
+    }
+}
+
+// 10
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int contador = 0, menores = 0, mayores = 0, intermedio = 0;
+            int[] vecinos = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+            for (int i = 0; i < vecinos.Length; i++)  
+            {
+                Console.WriteLine("Introduzca la edad de cada vecino");
+                int edad = int.Parse(Console.ReadLine());
+
+                if(edad<18)
+                {
+                    menores += 1;
+                }
+                if (edad >= 65)
+                {
+                    mayores += 1;
+                }
+                else
+                {
+                    intermedio += 1;
+                }
+                
+            }
+
+            Console.WriteLine("MENORES: "+menores);
+            Console.WriteLine("MAYORES "+mayores);
+            Console.WriteLine("ADULTOS "+intermedio);
+
+        }
+    }
+}
