@@ -288,3 +288,47 @@ namespace ConsoleApplication1
 
 // 7 
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int contador = 0, GanadorTiempo = 999, PerdedorTiempo = 0, Ganador = 0, Perdedor = 0; 
+            int[] jugadores = { 0, 1, 2, 3, 4, 5 };
+            int[] tiempo = { 0, 1, 2, 3, 4, 5 };  
+                        
+            for (int i = 0; i < jugadores.Length; i++)
+            {
+                Console.WriteLine("Tiempo del JUGADOR N°" + (contador + 1));
+                tiempo[contador] = int.Parse(Console.ReadLine());
+
+                if(tiempo[contador] < GanadorTiempo)
+                {
+                    Console.WriteLine("El jugador N° "+(contador+1)+" a pasado al previo delantero");
+                    GanadorTiempo = tiempo[contador];
+                    Ganador = jugadores[contador];
+                }
+                else if(tiempo[contador] > PerdedorTiempo)
+                {
+                    Console.WriteLine("El jugador N°"+(contador+1)+" va ultimo");
+                    PerdedorTiempo = tiempo[contador];
+                    Perdedor = jugadores[contador];
+                }
+                contador += 1;
+            }
+            Console.WriteLine("El Ganador fue el Jugador N°" + (Ganador+1) + " con un tiempo de " + GanadorTiempo + " segundos");
+            Console.WriteLine("El ultimo perdedor fue el jugador N°" + (Perdedor+1) + " con un tiempo de " + PerdedorTiempo + " segundos");
+
+        }
+    }
+}
+
+// 8
+
