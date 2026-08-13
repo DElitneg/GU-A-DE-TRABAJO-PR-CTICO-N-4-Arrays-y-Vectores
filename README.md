@@ -1,4 +1,4 @@
-# GU-A-DE-TRABAJO-PR-CTICO-N-4-Arrays-y-Vectores
+# GUIA-DE-TRABAJO-PRACTICO-N-4-Arrays-y-Vectores
 
 
 // 1
