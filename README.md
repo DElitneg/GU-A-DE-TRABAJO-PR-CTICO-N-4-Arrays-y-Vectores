@@ -403,7 +403,7 @@ namespace ConsoleApplication1
             int devolucion = int.Parse(Console.ReadLine());
 
 
-            for (int i = 0; productos[contador] != devolucion; i++)  
+            for (int i = 0; i < productos.Length; i++)  
             {
                 contador += 1;
             }            
